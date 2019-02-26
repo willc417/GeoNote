@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_write_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/addText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_text"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:hint="@string/title"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/etBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTitle"
+        android:hint="@string/write_your_post"
+        android:inputType="textMultiLine"
+        android:maxLines="10"
+        android:scrollHorizontally="false" />
+
+    <ImageView
+        android:id="@+id/imgAttach"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/etBody"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/btnAttach"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/imgAttach"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/addimage"
+        app:cb_color="@color/colorAccent"
+        app:cb_pressedRingWidth="10dip" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/btnSend"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/imgAttach"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/mail"
+
+        app:cb_color="@color/colorAccent"
+
+        app:cb_pressedRingWidth="10dip" />
+
+</RelativeLayout>
